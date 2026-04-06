@@ -1,18 +1,11 @@
-# React + Vite
+# Birthday Calendar
+This is a birthday calendar that can add/ edit/ delete birthdays using React, styled with Tailwind CSS. It saves locally on your device too.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+You can sort your birthdays by tags or search for a specific one using the search bar.
 
-Currently, two official plugins are available:
+Claude Code was used for debugging purposes.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+# Hardships, difficulties, problems blah blah blah
+I learned about local storage when I worked my previous project so I decided to implement it in this project too. I still struggled to get it working properly but it did at the end (somehow, thank you Claude Code)
 
-## React Compiler
-
-The React Compiler is enabled on this template. See [this documentation](https://react.dev/learn/react-compiler) for more information.
-
-Note: This will impact Vite dev & build performances.
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+You can visit the website [here](https://the-ultimate-birthday-calendar-v2.vercel.app/)
