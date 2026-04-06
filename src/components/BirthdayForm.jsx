@@ -47,8 +47,8 @@ export default function BirthdayForm({birthday, onSubmit, onCancel}) {
                     </label>
                     <input type="text"
                     name="name"
-                    value={formData.name} 
-                    nChange={handleChange}
+                    value={formData.name}
+                    onChange={handleChange}
                     required
                     className="w-full px-4 py-3 border border-gray-200 rounded-xl focus:ring-2 focus:ring-yellow-500 focus:border-transparent outline-none transition-all" placeholder="e.g., John Doe"/>
                 </div>
