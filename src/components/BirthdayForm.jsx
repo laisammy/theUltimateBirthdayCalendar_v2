@@ -16,6 +16,13 @@ export default function BirthdayForm({birthday, onSubmit, onCancel}) {
                 tags: birthday.tags || '',
                 notes: birthday.notes || ''
             });
+        } else {
+            setFormData({
+                name: '',
+                date: '',
+                tags: '',
+                notes: ''
+            });
         }
     }, [birthday]);
 
@@ -28,12 +35,21 @@ export default function BirthdayForm({birthday, onSubmit, onCancel}) {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        onSubmit(formData);
+
+        const dataToSave = { ...formData };
+
+        onSubmit(dataToSave);
 
         if (!birthday) {
-            setFormData({ name: '', date: '', tags: '', notes: ''});
+            setFormData({
+                name: "",
+                date: "",
+                tags: "",
+                notes: ""
+            });
         }
     };
+
 
     return(
         <form onSubmit = {handleSubmit} className="bg-white rounded-2xl p-8 shadow-lg border border-yellow-100 min-w-md">
@@ -70,12 +86,18 @@ export default function BirthdayForm({birthday, onSubmit, onCancel}) {
                     <label className="block text-sm font-semibold text-gray-700 mb-2">
                     Tags (comma separated)
                     </label>
-                    <input
-                    type="text"
-                    name="tags"
-                    value={formData.tags}
-                    onChange={handleChange}
-                    className="w-full px-4 py-3 border border-gray-200 rounded-xl focus:ring-2 focus:ring-yellow-500 focus:border-transparent outline-none transition-all" placeholder="e.g., Family, Friends, Work"/>
+                    <select
+                        name="tags"
+                        value={formData.tags}
+                        onChange={handleChange}
+                        required
+                        className="w-full px-4 py-3 border border-gray-200 rounded-xl focus:ring-2 focus:ring-yellow-500 focus:border-transparent outline-none transition-all"
+                    >
+                        <option value="">Select a tag</option>
+                        <option value="Family">Family</option>
+                        <option value="Friends">Friends</option>
+                        <option value="Work">Work</option>
+                    </select>
                 </div>
 
                 <div> {/* Note Input */}
